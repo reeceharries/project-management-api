@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+from pydantic import PostgresDsn
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -8,6 +9,8 @@ class Settings(BaseSettings):
     version: str = "0.1.0"
     environment: str = "development"
     debug: bool = False
+
+    database_url: PostgresDsn
 
     model_config = SettingsConfigDict(
         env_file=".env",
