@@ -2,10 +2,10 @@
 name = "project-management-api"
 version = "0.1.0"
 description = "A production-ready project management API built with FastAPI"
-authors = ["Reece Harries"]
+authors = [{name = "Reece Harries"}]
 readme = "README.md"
 license = "MIT"
-license-files = "LICENSE"
+license-files = ["LICENSE"]
 requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.18.0",
@@ -16,6 +16,9 @@ dependencies = [
     "sqlalchemy[asyncio]>=2.0.45",
     "uvicorn[standard]>=0.40.0",
 ]
+
+[tool.setuptools]
+packages = ["app"]
 
 [dependency-groups]
 dev = [
