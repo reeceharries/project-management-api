@@ -1,4 +1,4 @@
-from fastapi import APIRouter, status, HTTPException
+from fastapi import APIRouter, status
 from sqlalchemy import select
 
 from app.crud.project import get_project_or_404
