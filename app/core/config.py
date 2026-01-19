@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     debug: bool = False
 
     database_url: PostgresDsn
+    database_url_test: PostgresDsn
 
     model_config = SettingsConfigDict(
         env_file=".env",
